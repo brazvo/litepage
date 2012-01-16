@@ -11,3 +11,7 @@ _ReSharper.*
 *.cache
 *~
 *.swp
+/cache/*
+/app/templates/@cache/*
+/app/templates/@compiled/*
+/tmp/*
