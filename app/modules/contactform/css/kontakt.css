@@ -1,0 +1,123 @@
+/*********** Kontakt CSS ************/
+.contact {
+font-size: 10pt;
+}
+
+.contact  .main-lower{
+font-size: 10pt;
+text-align:left;
+}
+
+.cf-add-container{
+text-align:left;
+}
+
+.cf-messages{
+width: 500px;
+margin:0 auto;
+text-align:left;
+}
+
+.cf-edit-links{
+font-size:8pt;
+text-decoration: none;
+color:gray;
+}
+
+.cf-edit-links:hover{
+color:black;
+}
+
+.cf-show-lnk{
+margin-bottom:10px;
+}
+
+.cf-date{
+font-style:italic;
+}
+
+.cf-from{
+font-weight:bold;
+}
+
+.cf-message-cont{
+padding:10px 5px;
+text-align:left;
+}
+
+.cf-message-cont.odd{
+background-color:#efefef;
+color:#000;
+}
+
+.cf-paginator{
+font-size: 10pt;
+padding: 0 0 10px 0;
+}
+
+.cf-paginator a{
+color:#888;
+font-weight:bold;
+text-decoration:none;
+text-align:left;
+}
+
+.cf-paginator a:hover{
+color:#000;
+}
+
+.cf-page-active{
+font-weight:bold;
+font-size:13pt;
+}
+
+.cf-add-link{
+font-size:12pt;
+text-decoration:none;
+color:#888;
+cursor:pointer;
+}
+
+.cf-add-link:hover{
+font-size:12pt;
+color:#000;
+}
+
+.cf-adm-links{
+text-align:left;
+font-size:10pt;
+margin-bottom:10px;
+}
+
+.cf-form-messagebox{
+width:300px;
+height:140px;
+}
+
+#formCf-settings {
+text-align:left;
+width:400px;
+}
+
+.contact #formAdd-form-body, .contact #formCf-editform-body{
+width:99%;
+height:350px;
+}
+
+.cf-form-container{
+margin: 10px 0;
+}
+
+.contact .cf-adm-links {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.contact .cf-adm-links a {
+    color:#444;
+}
+
+.contact .cf-adm-links a:hover {
+    color:#999;
+    text-decoration: none;
+}

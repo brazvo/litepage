@@ -1,0 +1,42 @@
+/************ APPLICATION INFORMER **********/
+#app_informer {
+    top: 50px;
+    left: 0;
+    position: absolute;
+    border: 1px solid #999;
+    background: #fff;
+    opacity: .9;
+}
+
+#app_informer-inner {
+    padding: 10px 5px;
+}
+
+#app_informer h3 {
+    color: #666666;
+    font-family: "arial narrow",arial;
+    font-size: 12px;
+}
+
+#app_informer .item {
+    border-bottom: 1px dotted #CCCCCC;
+    color: #000000;
+    font-family: "arial narrow",arial;
+    font-size: 11px;
+    padding: 3px 0;
+}
+
+#app_informer .close {
+    background: none repeat scroll 0 0 #f00;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: bold;
+    height: 20px;
+    line-height: 18px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 20px;
+}
+

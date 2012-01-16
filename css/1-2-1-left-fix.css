@@ -1,0 +1,121 @@
+@charset "utf-8";
+body  {
+	font: 10pt Verdana, Arial, Helvetica, sans-serif;
+	margin: 0; /* Je vhodné nastavit nulový okraj a odsazení elementu body a umožnit tak použití různých výchozích hodnot prohlížeče. */
+	padding: 0;
+	background: #666666;
+}
+
+#body-inner{
+	background: #666666;
+	margin:0;
+	padding:0;
+	text-align:center; /* Umístí kontejnery na střed v prohlížečích IE 5*. Text je nastaven na výchozí zarovnání vlevo v selektoru #container. */
+	color:#000;
+}
+
+h1.title, h2.title, h3.title{
+margin-bottom: 10px;
+}
+
+.twoColFixLtHdr #container { 
+	width: 960px;  /* Nastavení o 20 px méně než je maximální šířka 800 px umožní zobrazení prvků prohlížeče a zabrání použití horizontální posuvné lišty. */
+	background: #FFFFFF;
+	margin: 0 auto; /* Automatické okraje (společně se šířkou) nastaví stránku na střed. */
+	border: 1px solid #000000;
+	text-align: left; /* Dojde k potlačení zarovnání textu: zarovnání na střed u elementu body. */
+} 
+.twoColFixLtHdr #header {
+	height:120px;
+	background: #DDDDDD; 
+}
+.twoColFixLtHdr #header #header-inner{
+    position:relative;
+	padding: 0;  /* Toto odsazení odpovídá zarovnání vlevo u elementů v tazích div, které se nacházejí pod ním. Pokud je v tagu #header použit obraz namísto textu, můžete chtít odsazení odstranit. */
+}
+
+/* Header Logo Block */
+.twoColFixLtHdr #header #header-inner #block-logo {
+	left:4px;
+	position:absolute;
+	top:13px;
+	z-index:100;
+}
+
+/* Header Title Block */
+.twoColFixLtHdr #header #header-inner #block-header-title{
+position:absolute;
+top:20px;
+left:470px;
+}
+
+.twoColFixLtHdr #header #header-inner #block-header-title h2{
+margin:0;
+}
+
+.twoColFixLtHdr #header #header-inner #block-header-title h2 a{
+color: black;
+font-weight: bold;
+text-decoration: none;
+}
+
+/* Header Slogan Block */
+.twoColFixLtHdr #header #header-inner #block-slogan {
+position:absolute;
+right:150px;
+top:55px;
+}
+
+.twoColFixLtHdr #header h1 {
+	margin: 0; /* vynulováním okraje posledního elementu v tagu #header div zabráníte sbalení okraje – nevysvětlitelné mezeře mezi tagy div. Pokud má tag div kolem pevný okraj, není tato operace nutná, jelikož rovněž nedochází ke sbalení okraje. */
+	padding: 10px 0; /* Použitím odsazení namísto okraje umožníte ponechání elementu ve vzdálenosti od okrajů tagu div. */
+}
+
+.twoColFixLtHdr #sidebar1 {
+    background: none repeat scroll 0 0 #EBEBEB;
+    float: left;
+    margin-left: -960px;
+    padding: 0;
+    width: 220px;
+}
+
+.twoColFixLtHdr #sidebar1 .sidebar1-inner{
+	padding: 15px 10px 15px 10px;
+}
+
+.twoColFixLtHdr #mainContent { 
+	margin: 0px; /* Levý okraj u tohoto elementu div vytvoří sloupec podél levé strany stránky – bez ohledu na množství obsahu v tagu sidebar1 div bude prostor sloupce zachován. Okraj můžete odstranit, chcete-li, aby text v tagu #mainContent div vyplnil prostor v tagu #sidebar1, když obsahu tagu #sidebar1 skončí. */
+	padding: 0; /* Odsazení představuje mezeru uvnitř pole div, okraj představuje mezeru vně pole div. */
+}
+.twoColFixLtHdr #mainContent .mainContent-inner {
+    float: left;
+    padding: 10px 20px;
+    width: 700px;
+    margin-left: 220px;
+}
+.twoColFixLtHdr #footer { 
+	padding: 0 10px 0 10px; /* Toto odsazení odpovídá zarovnání vlevo u elementů v tazích div, které se nacházejí nad ním. */
+	background:#DDDDDD; 
+} 
+.twoColFixLtHdr #footer p {
+	margin: 0; /* Vynulováním okrajů prvního elementu v zápatí zabráníte možnému sbalení okraje – vzniku mezery mezi tagy div. */
+	padding: 10px 0; /* Odsazení tohoto elementu vytvoří mezeru stejně jako okraj, avšak bez problému se sbalením okraje. */
+}
+.twoColFixLtHdr #footer  #footer-inner{ 
+	text-align:center;
+	height:40px;
+	line-height:40px;
+}
+.twoColFixLtHdr #footer  #footer-inner  a.copyright{
+	text-decoration:none;
+	color:inherit;
+}
+.twoColFixLtHdr #footer #footer-inner  a.created-link{
+	text-decoration:none;
+	color:inherit;
+}
+.twoColFixLtHdr #footer #footer-inner  a.created-link:hover{
+	text-decoration:underline;
+	color:#666;
+} 
+

@@ -1,0 +1,192 @@
+@charset "utf-8";
+body  {
+	font: 10pt Verdana, Arial, Helvetica, sans-serif;
+	margin: 0; /* Je vhodné nastavit nulový okraj a odsazení elementu body a umožnit tak použití různých výchozích hodnot prohlížeče. */
+	padding: 0;
+}
+#body-inner{
+	background: #666666;
+	margin:0;
+	padding:0;
+	text-align:center; /* Umístí kontejnery na střed v prohlížečích IE 5*. Text je nastaven na výchozí zarovnání vlevo v selektoru #container. */
+	color:#000;
+}
+div {
+  margin:0;
+  padding:0;
+}
+h1.title, h2.title, h3.title{
+  margin-top:0;
+  color:#000;
+}
+td {
+  font-size:10pt;
+}
+a {
+  color:#444;
+}
+a:hover{
+  color:#000;
+}
+small {
+font-size:8pt;
+}
+.thrColAbsHdr #container { 
+	width: 1000px;  /* Nastavení o 20 px méně než je maximální šířka 800 px umožní zobrazení prvků prohlížeče a zabrání použití horizontální posuvné lišty. */
+	background: #FFFFFF;
+	margin: 0 auto; /* Automatické okraje (společně se šířkou) nastaví stránku na střed. */
+	border: 1px solid #000000;
+	text-align: left; /* Dojde k potlačení zarovnání textu: zarovnání na střed u elementu body. */
+} 
+
+/* Tipy pro absolutně umístěné postranní lišty se záhlavím a zápatím:
+1. Absolutně umístěné (AP) elementy musí mít nastavenu horní a boční hodnotu, buď vlevo, nebo vpravo. (Ve výchozí podobě, není-li zadána žádná horní hodnota, bude element AP začínat bezprostředně za posledním elementem ve zdrojovém pořadí stránky. To znamená, že pokud jsou postranní lišty prvním elementem v tagu #container ve zdrojovém pořadí dokumentu, zobrazí se v elementu #container nahoře, aniž by byla nastavena horní hodnota. Pokud však později dojde z jakéhokoli důvodu k jejich přesunutí ve zdrojovém pořadí, bude nutné nastavit horní hodnotu požadovaného umístění.
+2. Absolutně umístěné (AP) elementy jsou vyjmuty z toku dokumentu. To znamená, že elementy kolem nich nejsou vázány jejich existencí a nezohledňují je při nacházení vlastní polohy na stránce. Tag AP div proto používejte pouze jako postranní sloupec, pokud jste si jisti, že prostřední element #mainContent div bude vždy obsahovat nejvíce obsahu. Pokud bude některá z postranních lišt obsahovat více obsahu, bude tato lišta přesahovat spodní okraj nadřazeného tagu div, a v tomto případě i zápatí, a její obsah se nebude zobrazovat.
+3. Pokud jsou výše uvedené podmínky splněny, absolutně umístěné postranní lišty představují snadný způsob ovládání zdrojového pořadí dokumentu.
+4. Pokud dojde ke změně zdrojového pořadí. Musí horní hodnota odpovídat výšce záhlaví, jelikož tak dojde k vizuálnímu zarovnání sloupců se záhlavím.
+*/
+.thrColAbsHdr #header { 
+	height: 120px; /* Měníte-li zdrojové pořadí sloupců, můžete použít výšku u záhlaví a vytvořit tak předpokládatelnou horní hodnotu pro sloupce. */
+	background: #DDDDDD; 
+	padding: 0;  /* Toto odsazení odpovídá zarovnání vlevo u elementů v tazích div, které se nacházejí pod ním. Pokud je v tagu #header použit obraz namísto textu, můžete chtít odsazení odstranit. */
+} 
+.thrColAbsHdr #header #header-inner{
+	padding: 0 10px 0 20px;  /* Toto odsazení odpovídá zarovnání vlevo u elementů v tazích div, které se nacházejí pod ním. Pokud je v tagu #header použit obraz namísto textu, můžete chtít odsazení odstranit. */
+	position:relative;
+} 
+.thrColAbsHdr #header h1 {
+	margin: 0; /* vynulováním okraje posledního elementu v tagu #header div zabráníte sbalení okraje – nevysvětlitelné mezeře mezi tagy div. Pokud má tag div kolem pevný okraj, není tato operace nutná, jelikož rovněž nedochází ke sbalení okraje. */
+	padding: 10px 0; /* Použitím odsazení namísto okraje umožníte ponechání elementu ve vzdálenosti od okrajů tagu div. */
+}
+/* Header Logo Block */
+.thrColAbsHdr #header #header-inner #block-logo {
+	left:4px;
+	position:absolute;
+	top:13px;
+}
+
+/* Header Title Block */
+.thrColAbsHdr #header #header-inner #block-header-title{
+position:absolute;
+top:20px;
+left:470px;
+}
+
+.thrColAbsHdr #header #header-inner #block-header-title h2{
+margin:0;
+}
+
+.thrColAbsHdr #header #header-inner #block-header-title h2 a{
+color: black;
+font-weight: bold;
+text-decoration: none;
+}
+
+/* Header Slogan Block */
+.thrColAbsHdr #header #header-inner #block-slogan {
+left:470px;
+position:absolute;
+top:55px;
+}
+.menu-nav-bar {
+background:none repeat scroll 0 0 #000000;
+height:28px;
+left:0;
+line-height:28px;
+position:absolute;
+top:92px;
+width:1000px;
+}
+
+.menu-nav-bar .menu-item {
+float:left;
+padding:0;
+}
+.menu-nav-bar .menu-item.active {
+background:none repeat scroll left 0 #333;
+padding:0 10px;
+}
+.menu-nav-bar .menu-item a {
+color:#FFF;
+display:block;
+font-family:"Trebuchet MS",Tahoma,Arial;
+font-weight:bold;
+padding:0 10px;
+text-decoration:none;
+}
+.menu-nav-bar .menu-item a:hover {
+color: #ccc;
+background:none no-repeat scroll center bottom transparent;
+}
+.menu-nav-bar .menu-item.active a {
+background:none repeat scroll right 0 transparent;
+color:#FFFFFF;
+padding:0;
+}
+.menu-nav-bar .menu-item.first {
+margin-left:10px;
+}
+.menu-nav-bar .menu-item.last {
+}
+.thrColAbsHdr #sidebar1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px; /* Skutečná šířka tohoto tagu div v prohlížečích, které odpovídají standardům, a standardním režimu prohlížeče Internet Explorer bude zahrnovat odsazení a pevný okraj přičtený k šířce. */
+	background: #EBEBEB; /* Barva pozadí se bude zobrazovat v délce obsahu sloupce, nikoli však dále. */
+}
+.thrColAbsHdr #sidebar1 #sidebar1-inner{
+	padding: 15px 10px 15px 10px; /* Odsazení vytváří mezeru mezi obsahem a okrajem tagu div. */
+}
+.thrColAbsHdr #sidebar2 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 200px; /* Skutečná šířka tohoto tagu div v prohlížečích, které odpovídají standardům, a standardním režimu prohlížeče Internet Explorer bude zahrnovat odsazení a pevný okraj přičtený k šířce. */
+	background: #EBEBEB; /* Barva pozadí se bude zobrazovat v délce obsahu sloupce, nikoli však dále. */
+}
+.thrColAbsHdr #sidebar2 #sidebar2-inner{
+	padding: 15px 10px 15px 10px; /* Odsazení vytváří mezeru mezi obsahem a okrajem tagu div. */
+}
+.thrColAbsHdr #mainContent { 
+	margin: 0; /* Pravý a levý okraj tohoto elementu div vytvářejí dva vnější sloupce po stranách stránky. Bez ohledu na to, jaké množství obsahu tagy sidebar div obsahují, mezera sloupce bude zachována. */
+	padding: 0; /* Odsazení představuje mezeru uvnitř pole div, okraj představuje mezeru vně pole div. */
+	position:relative;
+}
+.thrColAbsHdr #mainContent-inner { 
+	margin: 0px 200px; /* Pravý a levý okraj tohoto elementu div vytvářejí dva vnější sloupce po stranách stránky. Bez ohledu na to, jaké množství obsahu tagy sidebar div obsahují, mezera sloupce bude zachována. Okraj můžete odstranit, chcete-li, aby text v tagu #mainContent div vyplnil postranní prostor, když obsah jednotlivých postranních lišt skončí. */
+	padding: 10px 20px; /* Odsazení představuje mezeru uvnitř pole div, okraj představuje mezeru vně pole div. */
+}
+.thrColAbsHdr #footer { 
+	padding: 0 10px 0 20px; /* Toto odsazení odpovídá zarovnání vlevo u elementů v tazích div, které se nacházejí nad ním. */
+	background:#DDDDDD;
+} 
+.thrColAbsHdr #footer p {
+	margin: 0; /* Vynulováním okrajů prvního elementu v zápatí zabráníte možnému sbalení okraje – vzniku mezery mezi tagy div. */
+	padding: 10px 0; /* Odsazení tohoto elementu vytvoří mezeru stejně jako okraj, avšak bez problému se sbalením okraje. */
+}
+.thrColAbsHdr #footer  #footer-inner{ 
+	text-align:center;
+	height:40px;
+	line-height:40px;
+}
+.thrColAbsHdr #footer #footer-inner  a.copyright{
+	text-decoration:none;
+	color:inherit;
+}
+.thrColAbsHdr #footer #footer-inner  a.created-link{
+	text-decoration:none;
+	color:inherit;
+}
+.thrColAbsHdr #footer #footer-inner  a.created-link:hover{
+	text-decoration:underline;
+	color:#666;
+}
+.fltrt { /* Tuto třídu lze použít pro nastavení plovoucího elementu vpravo na stránce. Plovoucí element musí předcházet element, vedle kterého se má na stránce zobrazovat. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* Tuto třídu lze použít pro nastavení plovoucího elementu vlevo na stránce. */
+	float: left;
+	margin-right: 8px;
+}

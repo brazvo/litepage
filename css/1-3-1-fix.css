@@ -1,0 +1,172 @@
+@charset "utf-8";
+body  {
+	font: 10pt Verdana, Arial, Helvetica, sans-serif;
+	margin: 0; /* Je vhodné nastavit nulový okraj a odsazení elementu body a umožnit tak použití různých výchozích hodnot prohlížeče. */
+	padding: 0;
+        background: #666666;
+}
+#body-inner{
+	background: #666666;
+	margin:0;
+	padding:0;
+	text-align:center; /* Umístí kontejnery na střed v prohlížečích IE 5*. Text je nastaven na výchozí zarovnání vlevo v selektoru #container. */
+	color:#000;
+}
+
+div {
+  margin:0;
+  padding:0;
+}
+h1.title, h2.title, h3.title{
+  margin-top:0;
+  margin-bottom: 15px;
+  color:#000;
+}
+td {
+  font-size:10pt;
+}
+a {
+  color:#444;
+}
+a:hover{
+  color:#000;
+}
+
+a img {
+    border: none;
+}
+
+small {
+font-size:8pt;
+}
+.thrColFixHdr #container { 
+	width: 1000px;  /* Nastavení o 20 px méně než je maximální šířka 800 px umožní zobrazení prvků prohlížeče a zabrání použití horizontální posuvné lišty. */
+	background: #FFFFFF;
+	margin: 0 auto; /* Automatické okraje (společně se šířkou) nastaví stránku na střed. */
+	border: 1px solid #000000;
+	text-align: left; /* Dojde k potlačení zarovnání textu: zarovnání na střed u elementu body. */
+}
+.thrColFixHdr #container #container-inner{
+
+}
+.thrColFixHdr #header { 
+	background: #DDDDDD; 
+	height:120px;
+} 
+.thrColFixHdr #header #header-inner{
+	padding: 0 10px 0 20px;  /* Toto odsazení odpovídá zarovnání vlevo u elementů v tazích div, které se nacházejí pod ním. Pokud je v tagu #header použit obraz namísto textu, můžete chtít odsazení odstranit. */
+	position:relative;
+} 
+.thrColFixHdr #header h1 {
+	margin: 0; /* vynulováním okraje posledního elementu v tagu #header div zabráníte sbalení okraje – nevysvětlitelné mezeře mezi tagy div. Pokud má tag div kolem pevný okraj, není tato operace nutná, jelikož rovněž nedochází ke sbalení okraje. */
+	padding: 10px 0; /* Použitím odsazení namísto okraje umožníte ponechání elementu ve vzdálenosti od okrajů tagu div. */
+}
+/* Header Logo Block */
+.thrColFixHdr #header #header-inner #block-logo {
+	left:4px;
+	position:absolute;
+	top:13px;
+}
+
+/* Header Title Block */
+.thrColFixHdr #header #header-inner #block-header-title{
+position:absolute;
+top:20px;
+left:470px;
+}
+
+.thrColFixHdr #header #header-inner #block-header-title h2{
+margin:0;
+}
+
+.thrColFixHdr #header #header-inner #block-header-title h2 a{
+color: black;
+font-weight: bold;
+text-decoration: none;
+}
+
+/* Header Slogan Block */
+.thrColFixHdr #header #header-inner #block-slogan {
+position:absolute;
+right:150px;
+top:55px;
+}
+
+.thrColFixHdr #header #header-inner .menu-navigation {
+width:1000px;
+}
+
+.thrColFixHdr #sidebar1 {
+	float: left; /* Jelikož se jedná o plovoucí element, je nutné zadat šířku. */
+	width: 200px; /* Skutečná šířka tohoto tagu div v prohlížečích, které odpovídají standardům, a standardním režimu prohlížeče Internet Explorer bude zahrnovat odsazení a pevný okraj přičtený k šířce. */
+	background: #EBEBEB; /* Barva pozadí se bude zobrazovat v délce obsahu sloupce, nikoli však dále. */
+	padding: 0px; /* Odsazení vytváří mezeru mezi obsahem a okrajem tagu div. */
+}
+.thrColFixHdr #sidebar2 {
+	float: right; /* Jelikož se jedná o plovoucí element, je nutné zadat šířku. */
+	width: 200px; /* Skutečná šířka tohoto tagu div v prohlížečích, které odpovídají standardům, a standardním režimu prohlížeče Internet Explorer bude zahrnovat odsazení a pevný okraj přičtený k šířce. */
+	background: #EBEBEB; /* Barva pozadí se bude zobrazovat v délce obsahu sloupce, nikoli však dále. */
+	padding: 0px; /* Odsazení vytváří mezeru mezi obsahem a okrajem tagu div. */
+}
+.thrColFixHdr #sidebar1 #sidebar1-inner{
+	padding: 15px 10px 15px 10px; /* Odsazení vytváří mezeru mezi obsahem a okrajem tagu div. */
+}
+.thrColFixHdr #sidebar2 #sidebar2-inner{
+	padding: 15px 10px 15px 10px; /* Odsazení vytváří mezeru mezi obsahem a okrajem tagu div. */
+}
+.thrColFixHdr #mainContent { 
+	margin: 0 200px; /* Pravý a levý okraj tohoto elementu div vytvářejí dva vnější sloupce po stranách stránky. Bez ohledu na to, jaké množství obsahu tagy sidebar div obsahují, mezera sloupce bude zachována. Okraj můžete odstranit, chcete-li, aby text v tagu #mainContent div vyplnil postranní prostor, když obsah jednotlivých postranních lišt skončí. */
+	padding: 0px; /* Odsazení představuje mezeru uvnitř pole div, okraj představuje mezeru vně pole div. */
+}
+.thrColFixHdr #mainContent-inner { 
+	margin: 0px; /* Pravý a levý okraj tohoto elementu div vytvářejí dva vnější sloupce po stranách stránky. Bez ohledu na to, jaké množství obsahu tagy sidebar div obsahují, mezera sloupce bude zachována. Okraj můžete odstranit, chcete-li, aby text v tagu #mainContent div vyplnil postranní prostor, když obsah jednotlivých postranních lišt skončí. */
+	padding: 10px 20px; /* Odsazení představuje mezeru uvnitř pole div, okraj představuje mezeru vně pole div. */
+} 
+.thrColFixHdr #footer { 
+	padding: 0 10px 0 20px; /* Toto odsazení odpovídá zarovnání vlevo u elementů v tazích div, které se nacházejí nad ním. */
+	background:#DDDDDD; 
+} 
+.thrColFixHdr #footer p {
+	margin: 0; /* Vynulováním okrajů prvního elementu v zápatí zabráníte možnému sbalení okraje – vzniku mezery mezi tagy div. */
+	padding: 10px 0; /* Odsazení tohoto elementu vytvoří mezeru stejně jako okraj, avšak bez problému se sbalením okraje. */
+}
+.thrColFixHdr #footer  #footer-inner{ 
+	text-align:center;
+	height:40px;
+	line-height:40px;
+}
+.thrColFixHdr #footer #footer-inner  a.copyright{
+	text-decoration:none;
+	color:inherit;
+}
+.thrColFixHdr #footer #footer-inner  a.created-link{
+	text-decoration:none;
+	color:inherit;
+}
+.thrColFixHdr #footer #footer-inner  a.created-link:hover{
+	text-decoration:underline;
+	color:#666;
+}
+
+#formContentEdit-body {clear:left;}
+
+/********************************* USER PROFILE */
+.user-profile {}
+.user-profile .profile, .user-profile .staff-comment, .user-profile .staff-member,
+.user-profile .user-blog, .user-profile .user-photoalbums {margin: 10px 0;}
+.user-profile h3 {margin-bottom: 5px;}
+
+.fltrt { /* Tuto třídu lze použít pro nastavení plovoucího elementu vpravo na stránce. Plovoucí element musí předcházet element, vedle kterého se má na stránce zobrazovat. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* Tuto třídu lze použít pro nastavení plovoucího elementu vlevo na stránce. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* Tato třída musí být umístěna u elementu div nebo break a musí být posledním elementem před uzavřením kontejneru, který musí plovoucí prvek zcela obsahovat. */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}

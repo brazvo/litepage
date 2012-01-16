@@ -1,0 +1,19 @@
+/* IE 6*/
+
+#footer {
+    _margin-top:0px;
+    _margin-bottom:0px;
+}
+
+.twoColFixLtHdr #mainContent {
+    _height:743px;
+}
+
+#loader{
+    _width:44px;
+    _height:44px;
+    _position:absolute;
+    _margin:0;
+}
+
+/* IE 7*/

@@ -1,0 +1,550 @@
+/************ GENERAL **********/
+body{width:100%;height:100%;}
+
+#body-inner{width:100%;height:100%;}
+
+a {color: #444;text-decoration:none;}
+a:hover {color: #000;text-decoration:underline;}
+
+h1 {font-size: 22pt;}
+h2 {font-size: 17pt;}
+h3 {font-size: 14pt;}
+h4 {font-size: 12pt;}
+h5 {font-size: 10pt;}
+
+h1, h2, h3, h4, h5 {margin:0;}
+
+ul {padding:0;margin:10px 0;}
+
+ul ul {padding:0;margin:0;}
+
+li {padding:0;margin:0;}
+
+form input {margin-bottom:5px;}
+
+form .required label {color: #f00}
+
+form .frm-label {margin-top: 5px;}
+form .frm-control {margin-bottom: 5px;}
+
+.adm-frm-child-of-select{width:130px;}
+
+.fltrt { /* Tuto třídu lze použít pro nastavení plovoucího elementu vpravo na stránce. Plovoucí element musí předcházet element, vedle kterého se má na stránce zobrazovat. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* Tuto třídu lze použít pro nastavení plovoucího elementu vlevo na stránce. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* Tato třída musí být umístěna u elementu div nebo break a musí být posledním elementem před uzavřením kontejneru, který musí plovoucí prvek zcela obsahovat. */
+    clear:both !important;
+    height:0 !important;
+    font-size: 1px !important;
+    line-height: 0px !important;
+}
+/************ MESSAGES *********/
+
+div.flash-errors{
+display:block;
+border: 1px solid red;
+background: none repeat scroll 0 0 #F8F7DC;
+padding: 10px;
+text-align:center;
+width:95%;
+margin:0 auto;
+font-weight:bold;
+color:#000;
+font-family: tahoma, verdana, arial
+}
+
+div.flash-messages{
+display:block;
+border: 1px solid navy;
+background: none repeat scroll 0 0 #ECF6F7;
+padding: 10px;
+text-align:center;
+width:95%;
+margin:0 auto;
+font-weight:bold;
+color:#000;
+font-family: tahoma, verdana, arial
+}
+
+#loader{
+position:fixed;
+background:#fff;
+border:1px solid #000000;
+top:50%;
+left:50%;
+margin-left:-21px;
+margin-top:-21px;
+padding:5px;
+display:none;
+}
+
+#ajax-spinner {
+	position: absolute;
+	left: 45%;
+	top: 30%;
+	margin: 15px 0 0 15px;
+	padding: 17px;
+	background: white url('../images/loading.gif') no-repeat 50% 50%;
+	font-size: 0;
+	z-index: 123456;
+	/**display: none;*/
+}
+
+/************ BLOCKS ***********/
+
+/* User Info */
+div.block-user-info {
+background:none repeat scroll 0 0 #333333;
+color:silver;
+font-size:8pt;
+line-height:11px;
+padding:5px;
+position:absolute;
+right:0;
+top:0;
+}
+
+div.block-user-info  a{
+color: silver;
+font-weight: bold;
+text-decoration: none;
+}
+
+div.block-user-info  a:hover{
+color: yellow;
+}
+
+
+/*admin nav bar*/
+div.block-adm-bar {
+  padding:0;
+  color: white;
+  background: none repeat scroll 0 0 #000000;
+  position:relative;
+  text-align:left;
+  z-index:9999;
+}
+
+div.block-adm-bar .menu {
+height:22px;
+list-style:none outside none;
+margin:0;
+padding:0;
+}
+
+div.block-adm-bar .menu-item {
+float:left;
+font-size:8pt;
+line-height:20px;
+padding:0 6px;
+position:relative;
+}
+
+div.block-adm-bar .menu-item a {
+color:silver;
+display:block;
+font-weight:normal;
+text-decoration:none;
+}
+
+div.block-adm-bar .menu-item  a:hover{
+  color:#fff;
+}
+
+div.block-adm-bar .menu-item.first {
+
+}
+
+div.block-adm-bar .menu-item.last {
+
+}
+
+div.block-adm-bar .menu ul.submenu {
+background:none repeat scroll 0 0 #000000;
+border:1px solid silver;
+left:2px;
+list-style:none outside none;
+margin:0;
+padding:0;
+position:absolute;
+top:19px;
+width:150px;
+z-index:10000;
+}
+
+div.block-adm-bar .menu ul.submenu li {
+border:1px outset gray;
+float:none;
+line-height:20px;
+padding:0;
+}
+
+div.block-adm-bar .menu ul.submenu li a {
+display:block;
+padding:0 5px;
+width:138px;
+}
+
+div.block-adm-bar .menu ul.submenu li a:hover{
+background: none repeat scroll 0 0 #1F1F1F;
+}
+
+/*** GALLERY ***/
+ul.image-gallery{
+list-style:none;
+padding:0;
+}
+ul.image-gallery li{
+float:left;
+margin:0 10px 10px 0;
+}
+
+/***** FILE ATTACHEMENTS ******************/
+table.content-files-table{
+width:80%;
+border-top: 1px solid gray;
+border-left: 1px solid gray;
+}
+table.content-files-table .odd{
+background-color:silver;
+}
+table.content-files-table .even{
+background-color:#eee;
+}
+table.content-files-table td{
+border-bottom: 1px solid gray;
+border-right: 1px solid gray;
+padding: 3px 5px;
+}
+table.content-files-table td.size{
+text-align:center;
+}
+table.content-files-table td.icon{
+padding:2px 2px;
+width:25px
+}
+table.content-files-table td a{
+color:#444;
+text-decoration:none;
+}
+table.content-files-table td a:hover{
+color:#000;
+text-decoration:underline;
+}
+table.content-files-table td.icon img.content-files-icon{
+width:25px;
+height:25px;
+border:none;
+}
+
+/**************** MENUS ***************************/
+#sidebar1 ul.menu, #sidebar2 ul.menu {
+	padding: 0px;
+	list-style:none;
+}
+#sidebar1 ul.menu a, #sidebar2 ul.menu a{
+	color:#444;
+	text-decoration:none;
+}
+#sidebar1 ul.menu a:hover, #sidebar2 ul.menu a:hover{
+	color:#000;
+	text-decoration:underline;
+}
+#sidebar1 ul.submenu, #sidebar2 ul.submenu {
+	font-size:85%;
+	list-style:disc outside none;
+	padding:0 0 0 15px;
+}
+
+.content-inner ul {
+padding: 0 0 0 15px;
+}
+
+#header .menu-navigation {
+background:none repeat scroll 0 0 #000;
+height:28px;
+left:0;
+line-height:28px;
+list-style:none outside none;
+margin:0;
+padding:0;
+position:absolute;
+top:92px;
+width:960px;
+}
+
+#header .menu-navigation .menu-item {
+float:left;
+padding:0;
+}
+#header .menu-navigation .menu-item{
+background:none repeat scroll left 0 #000;
+padding:0;
+}
+#header .menu-navigation .menu-item a {
+color:#FFF;
+display:block;
+font-family:"Trebuchet MS",Tahoma,Arial;
+font-weight:bold;
+padding:0 10px;
+text-decoration:none;
+line-height:28px;
+}
+#header .menu-navigation .menu-item a:hover {
+color: #fff;
+background:none no-repeat scroll center bottom #666;
+}
+#header .menu-navigation .menu-item a.active {
+background:none repeat scroll right 0 #333;
+color:#FFFFFF;
+}
+#header .menu-navigation .menu-item.first {
+margin-left:10px;
+}
+#header .menu-navigation .menu-item.last {
+}
+
+/**************** ADMIN ITEMS *********************/
+.admin {
+background:#fff;
+color:#000;
+}
+.admin, .admin .title {
+font-family:Tahoma, verdana, arial;
+font-style:normal;
+}
+
+.admin .main-lower {
+font-size:10pt;
+}
+
+table.admin-table {
+        margin-top: 5px;
+	font-size:12px;
+	border-top:1px solid #1F1F1F;
+	border-left:1px solid #1F1F1F;
+	background:#fff;
+	width:100%;
+	_width:690px /* IE6 This must be fix*/
+}
+
+table.admin-table thead {
+	background:none repeat scroll 0 0 silver;
+	font-weight:bold;
+	height:30px;
+}
+
+table.admin-table th {
+	border-bottom:1px solid #1F1F1F;
+	border-right:1px solid #1F1F1F;
+	text-align:left;
+	padding:5px;
+}
+
+table.admin-table td {
+padding: 5px;
+border-bottom:1px solid #1F1F1F;
+border-right:1px solid #1F1F1F;
+font-size:8pt;
+color:#000;
+font-family: tahoma, verdana, arial;
+height:30px;
+}
+
+table.admin-table td a{
+color:blue;
+text-decoration:none;
+font-weight:bold;
+}
+
+table.admin-table td a:hover{
+color:blue;
+text-decoration:underline;
+font-weight:bold;
+}
+
+table.admin-table td a img{
+border: 1px solid #444444;
+width:20px;
+height:20px
+}
+
+table.admin-table td span img{
+border: 1px solid #888888;
+width:20px;
+height:20px
+}
+
+table.admin-table th.actions {
+	width:140px;
+}
+
+table.admin-table td.actions {
+}
+
+table.admin-table td.actions a.text-actions {
+background:none repeat scroll 0 0 #F1FAFF;
+border:1px outset #66A4FB;
+color:#000000;
+font-size:10px;
+font-weight:normal;
+margin:0 2px;
+padding:3px;
+}
+
+table.admin-table td.actions a.text-actions:hover {
+background:none repeat scroll 0 0 #D0EFFF;
+border:1px outset #66A4FB;
+text-decoration:none;
+}
+
+table.admin-table td.actions a.delete {
+background:none repeat scroll 0 0 #FFD0D0;
+border:1px outset #FFA6A6;
+}
+
+table.admin-table td.actions a.delete:hover {
+background:none repeat scroll 0 0 #FC9E9E;
+border:1px outset #66A4FB;
+}
+
+table.admin-table td.actions a.img-actions {
+background:none repeat scroll 0 0 transparent !important;
+border:none !important;
+margin: 0 1px;
+}
+
+table.admin-table td.actions a.img-actions:hover {
+background:none repeat scroll 0 0 transparent !important;
+border:none !important;
+}
+
+table.admin-table td.actions a.img-actions img {
+border:1px solid #999;
+}
+
+table.admin-table td.actions a.img-actions:hover img{
+border:1px outset #000;
+}
+
+table.admin-table a.hreforder {
+	color:#666;
+	text-decoration:none;
+}
+
+table.admin-table a.hreforder:hover {
+	color:#222;
+	text-decoration:none;
+}
+
+textarea#formContentEdit-body{
+width:100%;
+}
+
+span.required{
+font-size:8pt;
+color:red;
+}
+
+div.backlink{
+cursor:pointer;
+}
+
+div.cont-edit a {
+font-size:8pt;
+text-decoration: none;
+color:gray;
+}
+
+div.cont-edit a:hover {
+color:black;
+}
+
+a.add-link {
+  color:gray;
+  text-decoration:none;
+}
+
+a.add-link:hover {
+  color:black;
+}
+
+div.frm-item-description, .frm-element-description{
+font-size: 8pt;
+color: brown;
+background:#eee;
+}
+
+div.frm-inner-content{
+padding:10px 20px;
+background-color: #eee
+}
+
+div.module-list-container{
+margin:10px 0;
+}
+h3.module-list-title{
+margin-bottom:10px;
+}
+div.module-list-desc{
+font-size:8pt;
+}
+
+#filter-form {
+margin: 10px 0;
+}
+
+.paginator{
+display:block;
+margin: 10px 0 0 0;
+text-align:center;
+}
+
+.paginator a{
+color:#888;
+font-weight:bold;
+text-decoration:none;
+text-align:left;
+}
+
+.paginator a:hover{
+color:#000;
+}
+
+.paginator-page-active{
+font-weight:bold;
+font-size:13pt;
+}
+
+.paginator-add-link{
+font-size:12pt;
+text-decoration:none;
+color:#888;
+cursor:pointer;
+}
+
+.paginator-add-link:hover{
+font-size:12pt;
+color:#000;
+}
+
+.paginator-adm-links{
+text-align:left;
+font-size:13pt;
+}
+
+#login-form{
+color:#000;
+}
+
+#formLogin {
+text-align:left;
+color:#000;
+background:silver;
+padding:10px;
+}

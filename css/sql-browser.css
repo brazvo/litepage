@@ -1,0 +1,31 @@
+/*********** SQL BROWSER *************/
+#sql_browser {
+background:none repeat scroll 0 0 #FFFFFF;
+border:1px solid #444444;
+bottom:10px;
+font-family:"arial narrow", arial;
+font-size:8pt;
+opacity:0.9;
+padding:5px;
+position:fixed;
+right:10px;
+max-height: 400px;
+_height: 400px;
+overflow: auto;
+}
+
+#sql_browser .closer {
+background:none repeat scroll 0 0 #FF0000;
+color: #fff;
+cursor:pointer;
+font-family:tahoma;
+font-weight:bold;
+height:14px;
+line-height:13px;
+padding:4px;
+position:absolute;
+right:0;
+text-align:center;
+top:0;
+width:14px;
+}

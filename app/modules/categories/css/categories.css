@@ -1,0 +1,46 @@
+/*********** categories CSS ************/
+.categories {
+font-size: 10pt;
+}
+
+.categories  .main-lower{
+font-size: 10pt;
+}
+
+.categories #formCatEditItemForm-description{
+width: 100%;
+}
+
+.categories #formCatEditForm-description{
+width:100%;
+}
+
+.categories  h2.title, .categories  h3.title {
+margin:10px 0;
+}
+
+.categories .categories-content-row{
+margin: 5px 0;
+}
+
+.categories .categories-content-gallery-container {
+float:left;
+margin:0 5px 5px 0;
+}
+
+.categories .last-image{
+float:none;
+}
+
+.categories  .categories-first-image{
+float:left;
+margin-right:7px;
+}
+
+.categories .categories-content-title{
+
+}
+
+.categories p {
+margin: 0 0 10px 0;
+}

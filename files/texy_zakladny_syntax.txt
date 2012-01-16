@@ -1,0 +1,63 @@
+﻿Základné formátovanie v TEXTY
+#############################
+
+TEXY je výborný nástroj na formátovanie textu na webových stránkach. Hlavnou devízou je to, že pisateľ
+nepotrebuje ovládať značkovací jazyk HTML použivaný na webových stránkach, ale stačí mu písať jednoducho
+formátovaný text, podobný tomu v príkladoch nižšie a TEXY sa postará o správny prevod do HTML.
+
+**POZNÁMKA:** TEXY je jednosmerný nástroj, čiže nedokáže konvertovať HTML na TEXY formát, preto je vhodné
+si vaše výtvory uchovávať v nejakom TXT súbore v znakovej sade UTF-8 a prípade úpravy obsahu stránky, len nahradíte celý obsah z TEXY súboru.
+
+Toto je hlavný titulok
+######################
+
+Toto je podtitulok
+******************
+
+Toto by mal byť tretí titulok
+=============================
+
+A toto 4. titulok
+-----------------
+
+**Úprava Textu**
+
+Toto je nejaký text a **toto je nejaký hrubý text**
+ //a to je text v kurzíve na novom riadku//
+ text zalomíme tak, že na začiatok riadku
+ dáme medzeru.
+
+Nasledujúci text bude odsadený:
+> Tento text je odsadený
+> Text odsadíme tak, že na začiatku riadku dáme > a medzeru.
+
+Citáciu označíme takto:
+ Hamlet povedal: >>Byť, či nebyť...<<
+
+
+Čiary sa zobrazujú jednoducho:
+
+-----
+
+alebo
+
+*****
+
+Môžeš zobraziť aj zoznam:
+- položka 1
+- položka 2
+- položka 3
+
+alebo
+
+1) položka 1
+2) položka 2
+3) položka 3
+
+alebo vnorené zoznamy:
+1) Položka jedna
+   - podpoložka 1
+   - podpoložka 2
+2) Položka dva
+   - podpoložka 1
+   - podpoložka 2

@@ -1,0 +1,275 @@
+@charset "utf-8";
+body {
+	font: 12pt Arial, Verdana, Helvetica, sans-serif;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+}
+
+#body-inner{
+	background: #444;
+	margin:0;
+	padding:0;
+	text-align:center; /* Um�st� kontejnery na st�ed v�prohl�e��ch IE 5*. Text je nastaven na v�choz� zarovn�n� vlevo v�selektoru #container. */
+	color:#000;
+}
+
+div {
+  margin:0;
+  padding:0;
+}
+
+h1.title, h2.title, h3.title{
+  margin-top:0;
+  color:#000;
+}
+
+td {
+  font-size:10pt;
+}
+
+a {
+  color:black;
+}
+
+a:hover{
+  color:gray;
+}
+
+small {
+font-size:8pt;
+}
+
+/************************************************************************************ CONTAINER */
+
+.oneColFixCtrHdr #container {
+	width: 960px;  /* using 20px less than a full 800px width allows for browser chrome and avoids a horizontal scroll bar */
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: center; /* this overrides the text-align: center on the body element. */
+}
+
+
+.oneColFixCtrHdr #container-inner {
+margin: 0 auto;
+text-align:left;
+}
+
+/************************************************************************************ HEADER */
+
+.oneColFixCtrHdr #header {
+	background:none no-repeat scroll 0 0 #DDDDDD; 
+	padding: 0;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+	height:115px;
+}
+
+.oneColFixCtrHdr #header #header-inner{
+	position:relative;
+}
+
+/* Header Logo Block */
+.oneColFixCtrHdr #header #header-inner #block-logo {
+left:40px;
+position:absolute;
+top:6px;
+}
+
+/* Header Title Block */
+.oneColFixCtrHdr #header #header-inner #block-header-title{
+position:absolute;
+top:20px;
+left:470px;
+}
+
+.oneColFixCtrHdr #header #header-inner #block-header-title h2{
+margin:0;
+}
+
+.oneColFixCtrHdr #header #header-inner #block-header-title h2 a{
+color: black;
+font-weight: bold;
+text-decoration: none;
+}
+
+/* Header Slogan Block */
+.oneColFixCtrHdr #header #header-inner #block-slogan {
+position:absolute;
+right:150px;
+top:55px;
+}
+
+/*Header Navigation Bar*/
+.oneColFixCtrHdr #header #header-inner .menu-nav-bar  {
+background:none repeat scroll 0 0 #000000;
+color:#fff;
+height:30px;
+left:0;
+line-height:30px;
+position:absolute;
+top:85px;
+width:960px;
+}
+
+.oneColFixCtrHdr #header #header-inner .menu-nav-bar .menu-item {
+float:left;
+padding:0px;
+}
+
+.oneColFixCtrHdr #header #header-inner .menu-nav-bar .menu-item.active {
+background:none repeat scroll left 0 transparent;
+}
+
+.oneColFixCtrHdr #header #header-inner .menu-nav-bar .menu-item a {
+display:block;
+font-weight:bold;
+text-decoration:none;
+color:#fff;
+font-family: "Trebuchet MS", Tahoma, Arial;
+padding:0 10px;
+}
+
+.oneColFixCtrHdr #header #header-inner .menu-nav-bar .menu-item a:hover {
+background:none no-repeat scroll bottom center #444444;
+}
+
+.oneColFixCtrHdr #header #header-inner .menu-nav-bar .menu-item.active a {
+color:#ffffff;
+background:none repeat scroll right 0 #444444;
+}
+
+.oneColFixCtrHdr #header #header-inner .menu-nav-bar .menu-item.first {
+
+}
+
+.oneColFixCtrHdr #header #header-inner .menu-nav-bar .menu-item.last {
+
+}
+
+/***************************************************************************** CONTENT */
+
+.oneColFixCtrHdr #mainContent {
+	padding: 0; /* remember that padding is the space inside the div box and margin is the space outside the div box */
+	background: #FFFFFF;
+    min-height:400px;
+}
+
+.oneColFixCtrHdr #mainContent #mainContent-inner {
+	padding:10px 20px;
+}
+
+.oneColFixCtrHdr #mainContent .content-inner {
+margin:0;
+padding:0;
+}
+
+.oneColFixCtrHdr #footer {
+	padding: 0px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	clear:both;
+	margin: 0 auto;
+	position: relative;
+}
+
+.oneColFixCtrHdr #footer-inner {
+	padding: 0px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	clear:both;
+	background: none no-repeat scroll 0 0 #dddddd;
+}
+
+.oneColFixCtrHdr #footer-inner .footer-text {
+color:#000;
+display:block;
+font-family:"Trebuchet MS",Arial,Tahoma;
+font-size:10pt;
+text-align:center;
+height:30px;
+line-height:30px;
+}
+
+.oneColFixCtrHdr #footer-inner .footer-text a.copyright{
+color:#000;
+text-decoration: none;
+}
+
+.oneColFixCtrHdr #footer-inner .footer-text a.created-link{
+color:#000;
+text-decoration: none;
+}
+
+.oneColFixCtrHdr #footer-inner .footer-text a.created-link:hover{
+color:#444;
+text-decoration: underline;
+}
+
+.oneColFixCtrHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+
+h1.title{
+margin-top:0;
+}
+
+div.left-side  {
+float:left;
+width:247px;
+}
+
+.left-side ul.menu-produkty  {
+list-style:none outside none;
+margin:0;
+padding:0;
+}
+
+.left-side ul.menu-produkty li {
+}
+
+.left-side ul.menu-produkty li a {
+color:#000000;
+display:block;
+font-size:9pt;
+line-height:26px;
+padding:0 10px 0 15px;
+text-decoration:none;
+}
+
+.left-side ul.menu-produkty li a:hover, .left-side ul.menu-produkty li.active a{
+background:url(../cssimgs/menu-arrow.jpg) no-repeat scroll left center transparent;
+color:#777;
+}
+
+div.under-navbar{
+position:absolute;
+top:107px;
+left:0;
+width:989px;
+height:5px;
+background:url("../cssimgs/under-navbar-bg.jpg") repeat-x scroll 0 0 transparent;
+}
+
+a.sales-gallery img {
+margin:0 7px 14px;
+}
+
+.o-nas .main-lower{
+font-size:80%;
+}
+
+.o-nas .main-lower p{ 
+text-indent: 2ex;
+}
+
+a.pdf-link  {
+background:url("../cssimgs/pdf-icon.jpg") no-repeat scroll left bottom transparent;
+color:#004533;
+display:block;
+font-weight:bold;
+line-height:40px;
+padding-left:42px;
+text-decoration:none;
+}
+
+a.pdf-link:hover  {
+background:url("../cssimgs/pdf-icon.jpg") no-repeat scroll 0 0 transparent;
+color:gray;
+}
+
+/* ******************** ADMINISTRATION **************************** */

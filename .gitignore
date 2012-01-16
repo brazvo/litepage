@@ -1,0 +1,17 @@
+_koncept
+@koncept
+nbproject
+obj
+bin
+cache
+_ReSharper.*
+*.csproj.user
+*.resharper.user
+*.resharper
+*.suo
+*.cache
+*~
+*.swp
+/app/templates/@cache/
+/app/templates/@compiled/
+/tmp/

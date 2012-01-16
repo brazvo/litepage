@@ -1,0 +1,2 @@
+<?
+echo 'SLOVEN�INA';

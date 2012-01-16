@@ -1,0 +1,216 @@
+@charset "utf-8";
+body  {
+	font: 10pt Verdana, Arial, Helvetica, sans-serif;
+	margin: 0; /* Je vhodné nastavit nulový okraj a odsazení elementu body a umožnit tak použití různých výchozích hodnot prohlížeče. */
+	padding: 0;
+}
+
+#body-inner{
+	background: #666666;
+	margin:0;
+	padding:0;
+	text-align:center; /* Umístí kontejnery na střed v prohlížečích IE 5*. Text je nastaven na výchozí zarovnání vlevo v selektoru #container. */
+	color:#000;
+}
+
+/* Tipy pro elastická rozvržení
+1. Jelikož celková velikost u elastických rozvržení je dána výchozí velikostí písma uživatele, nelze hodnoty s jistotou předpokládat. Při správném použití jsou vhodnější pro uživatele, kteří vyžadují větší velikost písma, protože poměr délky řádků zůstává zachován.
+2. Nastavení velikostí tagů div v tomto rozvržení je založeno na 100% velikosti písma v elementu body. V případě celkového zmenšení velikosti textu pomocí velikosti písma: 80 % v elementu body nebo #container; dojde k poměrnému zmenšení celého rozvržení. Zmenšení můžete kompenzovat samostatným zvětšením některých tagů div.
+3. Pokud dojde ke změně velikosti písma v různé míře u jednotlivých tagů div, nikoli celkově (např. tag #sidebar1 je nastaven na 70 % velikosti písma a tag #mainContent je nastaven na 85 % velikosti písma), dojde k poměrné změně celkové velikosti každého z tagů div. Můžete provést úpravy na základě konečné velikosti písma.
+*/
+
+div {
+  margin:0;
+  padding:0;
+}
+h1.title, h2.title, h3.title{
+  margin-top:0;
+  color:#000;
+}
+td {
+  font-size:10pt;
+}
+a {
+  color:#444;
+}
+a:hover{
+  color:#000;
+}
+small {
+font-size:8pt;
+}
+.thrColElsHdr #container { 
+	width: 75em;  /* Tato šířka vytvoří kontejner, který lze umístit do okna prohlížeče s šířkou 800 px, pokud je pro text ponechána výchozí velikost písma prohlížeče. */
+	background: #FFFFFF;
+	margin: 0 auto; /* Automatické okraje (společně se šířkou) nastaví stránku na střed. */
+	border: 1px solid #000000;
+	text-align: left; /* Dojde k potlačení zarovnání textu: zarovnání na střed u elementu body. */
+}
+.thrColElsHdr #container #container-inner{
+} 
+.thrColElsHdr #header { 
+	height:9em;
+	background: #DDDDDD; 
+}
+.thrColElsHdr #header #header-inner{
+	padding: 0 10px;  /* Toto odsazení odpovídá zarovnání vlevo u elementů v tazích div, které se nacházejí pod ním. Pokud je v tagu #header použit obraz namísto textu, můžete chtít odsazení odstranit. */
+	position:relative;
+}
+.thrColElsHdr #header h1 {
+	margin: 0; /* vynulováním okraje posledního elementu v tagu #header div zabráníte sbalení okraje – nevysvětlitelné mezeře mezi tagy div. Pokud má tag div kolem pevný okraj, není tato operace nutná, jelikož rovněž nedochází ke sbalení okraje. */
+	padding: 10px 0; /* Použitím odsazení namísto okraje umožníte ponechání elementu ve vzdálenosti od okrajů tagu div. */
+}
+/* Header Logo Block */
+.thrColElsHdr #header #header-inner #block-logo {
+left:1em;
+position:absolute;
+top:1em;
+}
+
+/* Header Title Block */
+.thrColElsHdr #header #header-inner #block-header-title {
+left:30em;
+position:absolute;
+top:2em;
+}
+
+.thrColElsHdr #header #header-inner #block-header-title h2{
+margin:0;
+}
+
+.thrColElsHdr #header #header-inner #block-header-title h2 a{
+color: black;
+font-weight: bold;
+text-decoration: none;
+}
+
+/* Header Slogan Block */
+.thrColElsHdr #header #header-inner #block-slogan {
+left:30em;
+position:absolute;
+top:4em;
+}
+
+/* Header Navigation Bar */
+.menu-nav-bar {
+background:none repeat scroll 0 0 #000000;
+height:2em;
+left:0;
+line-height:2em;
+position:absolute;
+top:7em;
+width:75em;
+}
+
+.menu-nav-bar .menu-item {
+float:left;
+padding:0;
+}
+.menu-nav-bar .menu-item.active {
+background:none repeat scroll left 0 #333;
+padding:0 10px;
+}
+.menu-nav-bar .menu-item a {
+color:#FFF;
+display:block;
+font-family:"Trebuchet MS",Tahoma,Arial;
+font-weight:bold;
+padding:0 10px;
+text-decoration:none;
+}
+.menu-nav-bar .menu-item a:hover {
+color: #ccc;
+background:none no-repeat scroll center bottom transparent;
+}
+.menu-nav-bar .menu-item.active a {
+background:none repeat scroll right 0 transparent;
+color:#FFFFFF;
+padding:0;
+}
+.menu-nav-bar .menu-item.first {
+margin-left:10px;
+}
+.menu-nav-bar .menu-item.last {
+}
+
+/* Tipy pro tag sidebar1:
+1. Pokud nastavíte hodnotu velikosti písma pro tento tag div, celková šířka tagu div bude upravena odpovídajícím způsobem.
+2. Jelikož jsou používány jednotky em, je vhodné nepoužívat odsazení pro vlastní postranní lištu. U prohlížečů, které odpovídají standardům, bude přidáno k šířce, čímž dojde k vytvoření neznámé skutečné šířky. 
+3. Mezeru mezi stranou tagu div a obsaženými elementy lze vytvořit vložením levého a pravého okraje těchto elementů, jak je uvedeno v pravidle „.thrColElsHdr #sidebar1 p“.
+*/
+.thrColElsHdr #sidebar1 {
+	float: left; 
+	width: 15em; /* Jelikož se jedná o plovoucí element, je nutné zadat šířku. */
+	background: #EBEBEB; /* Barva pozadí se bude zobrazovat v délce obsahu sloupce, nikoli však dále. */
+}
+.thrColElsHdr #sidebar1 #sidebar1-inner{
+	padding: 15px 10px; /* Horní a dolní odsazení vytvářejí uvnitř tagů div viditelnou mezeru. */
+}
+.thrColElsHdr #sidebar2 {
+	float: right; 
+	width: 15em; /* Jelikož se jedná o plovoucí element, je nutné zadat šířku. */
+	background: #EBEBEB; /* Barva pozadí se bude zobrazovat v délce obsahu sloupce, nikoli však dále. */
+}
+.thrColElsHdr #sidebar2 #sidebar2-inner{
+	padding: 15px 10px; /* Horní a dolní odsazení vytvářejí uvnitř tagů div viditelnou mezeru. */
+}
+.thrColElsHdr #sidebar1 h3, .thrColElsHdr #sidebar1 p, .thrColElsHdr #sidebar2 p, .thrColElsHdr #sidebar2 h3 {
+	margin-left: 0px; /* Pro každý prvek umístěný do sloupce je nutné zadat levý a pravý okraj. */
+	margin-right: 0px;
+}
+
+/* Tipy pro tag mainContent:
+1. Pokud nastavíte v tagu #mainContent div odlišnou hodnotu velikosti písma než v tagu #sidebar1 div, okraje tagu #mainContent div budou založeny na příslušné velikosti písma a šířka tagu #sidebar1 div bude založena na velikosti písma. Hodnoty těchto tagů div můžete upravit.
+2. Mezera mezi tagy mainContent a sidebar1 je vytvořena levou mezerou v tagu mainContent div. Bez ohledu na to, jaké množství obsahu tag sidebar1 div obsahuje, mezera sloupce bude zachována. Levý okraj můžete odstranit, chcete-li, aby text v tagu #mainContent div vyplnil prostor v tagu #sidebar1, když obsah tagu #sidebar1 skončí.
+3. Chcete-li zabránit posunutí plovoucího objektu, vyzkoušejte přibližnou maximální velikost obrázku či elementu, jelikož toto rozvržení je založeno na velikosti písma nastavené uživatelem v kombinaci s nastavenými hodnotami. Pokud má uživatel velikost písma nastavenu na menší než běžnou velikost, bude v tagu #mainContent div k dispozici méně místa, než se zobrazuje při zkoušení.
+4. V podmíněném komentáři aplikace Internet Explorer níže je vlastnost zoom použita k získání vlastnosti tagu mainContent „hasLayout“. Je tak zabráněno několika chybám, které mohou u prohlížeče IE vyskytnout.
+*/
+.thrColElsHdr #mainContent {
+ 	margin: 0 15em 0 15em; /* Pravý okraj lze zadat v jednotkách em nebo obrazových bodech. Dojde k vytvoření mezery podél pravé strany stránky. */
+}
+.thrColElsHdr #mainContent #mainContent-inner{
+	padding:10px 20px;
+}
+.thrColElsHdr #footer { 
+	background:#DDDDDD;
+}
+.thrColElsHdr #footer #footer-inner{
+	padding: 0 10px; /* Toto odsazení odpovídá zarovnání vlevo u elementů v tazích div, které se nacházejí nad ním. */
+}
+.thrColElsHdr #footer  #footer-inner{ 
+	text-align:center;
+	height:3em;
+	line-height:3em;
+}
+.thrColElsHdr #footer #footer-inner  a.copyright{
+	text-decoration:none;
+	color:inherit;
+}
+.thrColElsHdr #footer #footer-inner  a.created-link{
+	text-decoration:none;
+	color:inherit;
+}
+.thrColElsHdr #footer #footer-inner  a.created-link:hover{
+	text-decoration:underline;
+	color:#666;
+}
+.thrColElsHdr #footer p {
+	margin: 0; /* Vynulováním okrajů prvního elementu v zápatí zabráníte možnému sbalení okraje – vzniku mezery mezi tagy div. */
+	padding: 10px 0; /* Odsazení tohoto elementu vytvoří mezeru stejně jako okraj, avšak bez problému se sbalením okraje. */
+}
+
+/* Různé třídy pro opakované použití */
+.fltrt { /* Tuto třídu lze použít pro nastavení plovoucího elementu vpravo na stránce. Plovoucí element musí předcházet element, vedle kterého se má na stránce zobrazovat. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* Tuto třídu lze použít pro nastavení plovoucího elementu vlevo na stránce. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* Tato třída musí být umístěna u elementu div nebo break a musí být posledním elementem před uzavřením kontejneru, který musí plovoucí prvek zcela obsahovat. */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}

@@ -1,0 +1,85 @@
+/*********** Ratings and Views CSS ************/
+.rater-object { text-align: center; font-size: 11px;}
+
+.rater-object p {
+    margin: 0;
+}
+
+.rater-object .orange {
+	color: #f60;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.rater-object .rating-background {
+    background: url("rating.gif") repeat-x scroll 0 -16px transparent;
+    height: 16px;
+    position: relative;
+    width: 90px;
+	margin: 5px 0;
+}
+
+.rater-object .actual-rating {
+    background: url("rating.gif") repeat-x scroll 0 0 transparent;
+    height: 16px;
+}
+
+.rater-object .rating-active {}
+
+.rater-object .rate-1 { 
+    display: block;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    width: 18px;
+    z-index: 5;
+}
+
+.rater-object .rate-2 {
+    display: block;
+    height: 16px;
+    left: 18px;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    width: 18px;
+    z-index: 5;
+}
+
+.rater-object .rate-3 {
+    display: block;
+    height: 16px;
+    left: 36px;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    width: 18px;
+    z-index: 5;
+}
+
+.rater-object .rate-4 {
+    display: block;
+    height: 16px;
+    left: 54px;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    width: 18px;
+    z-index: 5;
+}
+
+.rater-object .rate-5 {
+    display: block;
+    height: 16px;
+    left: 72px;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    width: 18px;
+    z-index: 5;
+}
+
+#ratings-and-views .control-viewed {margin: 5px 0; color: #006;}
+#ratings-and-views .control-viewed .viewed {font-weight: bold; color: #000;}

@@ -1,0 +1,131 @@
+/*********** Kontakt CSS ************/
+.webform {
+font-size: 10pt;
+}
+
+.webform a {
+    color: #666666;
+    font-family: "arial";
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.webform a:hover {
+color:#000;
+}
+
+.webform  .main-lower{
+font-size: 10pt;
+text-align:left;
+}
+
+.wf-add-container{
+text-align:left;
+}
+
+.wf-messages{
+width: 500px;
+margin:0 auto;
+text-align:left;
+}
+
+.wf-edit-links{
+font-size:8pt;
+text-decoration: none;
+color:gray;
+}
+
+.wf-edit-links:hover{
+color:black;
+}
+
+.wf-show-lnk{
+margin-bottom:10px;
+}
+
+.wf-date{
+font-style:italic;
+}
+
+.wf-from{
+font-weight:bold;
+}
+
+.wf-message-cont{
+padding:10px 5px;
+text-align:left;
+}
+
+.wf-message-cont.odd{
+background-color:#efefef;
+}
+
+.wf-paginator{
+font-size: 10pt;
+padding: 0 0 10px 0;
+}
+
+.wf-paginator a{
+color:#888;
+font-weight:bold;
+text-decoration:none;
+text-align:left;
+}
+
+.wf-paginator a:hover{
+color:#000;
+}
+
+.wf-page-active{
+font-weight:bold;
+font-size:13pt;
+}
+
+.wf-add-link{
+font-size:12pt;
+text-decoration:none;
+color:#888;
+cursor:pointer;
+}
+
+.wf-add-link:hover{
+font-size:12pt;
+color:#000;
+}
+
+.wf-adm-links{
+text-align:left;
+font-size:10pt;
+margin-bottom:10px;
+}
+
+.wf-form-messagebox{
+width:80%;
+height:140px;
+}
+
+#formCf-settings {
+text-align:left;
+width:400px;
+}
+
+.webform #formAdd-form-body, .webform #formWf-editform-body{
+width:99%;
+height:350px;
+}
+
+.wf-form-container{
+margin: 10px 0;
+}
+
+.webform #priority-frm{
+	margin: 10px 0;
+}
+
+.webform .webform-adm-links {
+    margin: 10px 0;
+}
+
+.webform .webform-adm-links a {
+    margin: 0 3px;
+}

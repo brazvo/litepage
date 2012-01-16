@@ -1,0 +1,82 @@
+#dataTable {
+	position: relative;
+}
+
+#ajax-spinner {
+	position: absolute;
+	left: 40%;
+	top: 40%;
+	margin: 15px 0 0 15px;
+	padding: 17px;
+	background: white url('ajax-loader.gif') no-repeat 50% 50%;
+	font-size: 0;
+	z-index: 123456;
+	/**display: none;*/
+}
+
+.dataTable {
+background-color:white;
+border:1px solid silver;
+padding:0;
+width:100%;
+}
+
+.dataTable th {
+background-color:#EB690A;
+border-color:silver;
+border-right:1px solid silver;
+color:black;
+font-family:Tahoma;
+font-size:100%;
+padding:5px;
+text-align:left;
+}
+
+.dataTable tr:hover {
+	background-color: #FFFFCC;
+}
+
+.dataTable td {
+border-color:silver;
+border-right:1px solid silver;
+border-top:1px solid silver;
+font-family:Tahoma;
+font-size:90%;
+padding:5px;
+}
+
+#content #tbl-performances td {
+padding:5px; 
+}
+
+.dataTable a.actions {
+	border-style: outset;
+	border-width: 1px;
+	border-color: gray;
+	font-family: Tahoma;
+	font-size: 70%;
+	text-decoration: none;
+	font-weight:normal;
+	padding: 2px;
+	background-color: #D3D3D3;
+	color: black;
+}
+
+.dataTable a.actions:hover {
+	background-color: #A9A9A9;
+}
+
+.dataTable .even {
+	background-color: #EAF1FF;
+}
+
+.dataTable a.hreforder {
+	font-family: arial;
+	font-size: 70%;
+	color:navy;
+	text-decoration: none;
+}
+
+.dataTable a.hreforder:hover {
+	color:blue;
+}

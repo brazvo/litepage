@@ -1,0 +1,105 @@
+/*********** Novinky CSS ************/
+.novinky {
+font-size: 10pt;
+}
+
+.novinky a {
+color:#666;
+text-decoration:none;
+}
+
+.novinky a:hover {
+color:#000;
+}
+
+.novinky  .main-lower{
+font-size: 10pt;
+text-align:lext;
+}
+
+.news-add-container{
+text-align:left;
+}
+
+.news-messages{
+text-align:left;
+}
+
+.news-edit-links{
+font-size:8pt;
+text-decoration: none;
+color:gray;
+}
+
+.news-edit-links:hover{
+color:black;
+}
+
+.news-date{
+font-style:italic;
+}
+
+.news-from{
+font-weight:bold;
+}
+
+.news-message-cont{
+padding:10px 5px;
+text-align:left;
+}
+
+.news-message-cont.odd{
+background-color:#efefef;
+}
+
+.news-paginator{
+font-size: 10pt;
+padding: 0 0 10px 0;
+}
+
+.news-paginator a{
+color:#888;
+font-weight:bold;
+text-decoration:none;
+text-align:left;
+}
+
+.news-paginator a:hover{
+color:#000;
+}
+
+.news-page-active{
+font-weight:bold;
+font-size:13pt;
+}
+
+.news-add-link{
+font-size:12pt;
+text-decoration:none;
+color:#888;
+cursor:pointer;
+}
+
+.news-add-link:hover{
+font-size:12pt;
+color:#000;
+}
+
+.news-adm-links{
+text-align:left;
+font-size:13pt;
+}
+
+.news-adm-links a{
+color: #444;
+text-decoration:none;
+}
+
+.news-adm-links a:hover{
+color: #000;
+}
+
+#formNews-settings {
+text-align:left;
+width:400px;
+}

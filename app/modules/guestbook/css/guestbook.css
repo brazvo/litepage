@@ -1,0 +1,98 @@
+/*********** Guestbook CSS ************/
+.guestbook {
+font-size: 10pt;
+}
+
+.guestbook a {
+color:#666;
+text-decoration:none;
+}
+
+.guestbook a:hover {
+color:#000;
+}
+
+.guestbook  .main-lower{
+font-size: 10pt;
+text-align:center;
+}
+
+.gb-add-container{
+text-align:left;
+}
+
+.gb-messages{
+width: 500px;
+margin:0 auto;
+text-align:left;
+}
+
+.gb-edit-links{
+font-size:8pt;
+text-decoration: none;
+color:gray;
+}
+
+.gb-edit-links:hover{
+color:black;
+}
+
+.gb-date{
+font-style:italic;
+}
+
+.gb-from{
+font-weight:bold;
+}
+
+.gb-message-cont{
+padding:10px 5px;
+text-align:left;
+}
+
+.gb-message-cont.odd{
+background-color:#efefef;
+}
+
+.gb-paginator{
+font-size: 10pt;
+padding: 0 0 10px 0;
+}
+
+.gb-paginator a{
+color:#888;
+font-weight:bold;
+text-decoration:none;
+text-align:left;
+}
+
+.gb-paginator a:hover{
+color:#000;
+}
+
+.gb-page-active{
+font-weight:bold;
+font-size:13pt;
+}
+
+.gb-add-link{
+font-size:12pt;
+text-decoration:none;
+color:#888;
+cursor:pointer;
+}
+
+.gb-add-link:hover{
+font-size:12pt;
+color:#000;
+}
+
+.gb-adm-links{
+text-align:left;
+font-size:13pt;
+}
+
+#formGb-settings {
+text-align:left;
+width:400px;
+}
