@@ -3,6 +3,7 @@ _koncept
 nbproject
 obj
 bin
+cache
 _ReSharper.*
 *.csproj.user
 *.resharper.user
@@ -11,7 +12,6 @@ _ReSharper.*
 *.cache
 *~
 *.swp
-/cache/*
-/app/templates/@cache/*
-/app/templates/@compiled/*
-/tmp/*
+/app/templates/@cache/
+/app/templates/@compiled/
+/tmp/
