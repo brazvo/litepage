@@ -2,8 +2,8 @@
 
 /**
  * subor: JsLoader.php
- * @version 0.11
- * @author B ZVolensky (BZ)
+ * @version 0.12
+ * @author B Zvolensky (BZ)
  * =============================================================
  * 
  * @tutorial
@@ -71,6 +71,9 @@
  * Pridane overenie existencie js suboru v metode render() a
  * k JS suborom je automaticky pridana timestamp, takze po zmene v subore sa automaticky
  * nacita aktualna verzia
+ * 
+ * v0.12
+ * Pri suboroch pre IE detekcia priznaku lte
  */
 
 class JsScript {
@@ -157,11 +160,15 @@ class JsScript {
      * @param bool $andLower urcuje ak je nastavena verzia, ci bude styl pouzity aj pre nizsie verzie
      * @return JsScript 
      */
-    public function isIE($version = null, $andLower = false)
+    public function isIE($version = null, $andLower = NULL)
     {
         $this->isIE['version'] = $version;
-        if($this->isIE['version']) $this->isIE['lower'] = $andLower;
-            else $this->isIE['lower'] = false;
+        if($this->isIE['version']) {
+			$this->isIE['lower'] = $andLower;
+		}
+        else {
+			$this->isIE['lower'] = NULL;
+		}
         
         return $this;
     }
@@ -194,7 +201,7 @@ class JsScript {
         // check if for ie
         if($this->isIE) {
             
-            $lte = ( $this->isIE['lower'] ? 'lte ' : '');
+            $lte = ($this->isIE['lower'] ? $this->isIE['lower'] . ' ' : '');
             $version = ( $this->isIE['version'] ? ' '.$this->isIE['version'] : '');
                 
             $iestart = "<!--[if {$lte}IE{$version}]>";

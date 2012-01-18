@@ -2,7 +2,7 @@
 
 /**
  * subor: CssLoader.php
- * @version 0.11
+ * @version 0.12
  * @author B ZVolensky (BZ)
  * =============================================================
  * 
@@ -75,6 +75,9 @@
  * Pridane overenie existencie css suboru v metode render() a
  * k CSS suborom je automaticky pridana timestamp, takze po zmene v subore sa automaticky
  * nacita aktualna verzia
+ * 
+ * v0.12
+ * Pri suboroch pre IE detekcia priznaku lte
  */
 
 class CssStyle {
@@ -177,7 +180,7 @@ class CssStyle {
      * @param bool $andLower urcuje ak je nastavena verzia, ci bude styl pouzity aj pre nizsie verzie
      * @return CssStyle 
      */
-    public function isIE($version = null, $andLower = false)
+    public function isIE($version = null, $andLower = NULL)
     {
         $this->isIE['version'] = $version;
         if($this->isIE['version']) $this->isIE['lower'] = $andLower;
@@ -214,7 +217,7 @@ class CssStyle {
         // check if for ie
         if($this->isIE) {
             
-            $lte = ( $this->isIE['lower'] ? 'lte ' : '');
+            $lte = ($this->isIE['lower'] ? $this->isIE['lower'] . ' ' : '');
             $version = ( $this->isIE['version'] ? ' '.$this->isIE['version'] : '');
                 
             $iestart = "<!--[if {$lte}IE{$version}]>";
